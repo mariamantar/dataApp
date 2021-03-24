@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const payloadSchema = require('./payloadSchema');
-const { getClassification, getMode } = require('./types/index');
+const { getClassification, getMode } = require('../types/index');
 
 const jsonValidator = require('jsonschema').Validator;
 const bodyParser = require('body-parser'); 
@@ -24,6 +24,7 @@ app.post('/', (req, res) => {
 
         const classification = getClassification(incomingReq.classification);
         const mode = getMode(incomingReq.mode);
+
         // unix timestamp 
         const timestamp = new Date().getTime()/1000;
        

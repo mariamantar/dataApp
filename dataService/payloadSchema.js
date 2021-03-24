@@ -23,4 +23,5 @@ const payloadSchema = {
     }, required: ['version', 'timestamp', 'trafficProcessorVersion', 'httpVersion', 'ip', 'httpMethod', 'mode', 'classification', 'headers']
   };
     
-  module.exports = payloadSchema;
+module.exports = payloadSchema;
+  
